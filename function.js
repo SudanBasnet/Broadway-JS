@@ -84,52 +84,52 @@
 
 // //callback function
 
-const parent = (func) => {
-  console.log("parent");
-  console.log(func);
-  let res = func(12, 3);
-  console.log(res);
-};
+// const parent = (func) => {
+//   console.log("parent");
+//   console.log(func);
+//   let res = func(12, 3);
+//   console.log(res);
+// };
 
-const child = (a, b) => {
-  console.log("child");
-  return a + b;
-};
+// const child = (a, b) => {
+//   console.log("child");
+//   return a + b;
+// };
 
-parent(child);
+// parent(child);
 
-parent((a, b) => {
-  console.log("child");
-  return a + b;
-});
+// parent((a, b) => {
+//   console.log("child");
+//   return a + b;
+// });
 
-// higher order function
-// A function is higher-order if it:
+// // higher order function
+// // A function is higher-order if it:
 
-// Returns another function
-// OR takes a function as argument
-const hof = () => {
-  console.log("hof");
-  const child = (a, b) => {
-    console.log("inside hof");
-    return a + b;
-  };
-  return child;
-};
+// // Returns another function
+// // OR takes a function as argument
+// const hof = () => {
+//   console.log("hof");
+//   const child = (a, b) => {
+//     console.log("inside hof");
+//     return a + b;
+//   };
+//   return child;
+// };
 
-let func = hof();
-func(12, 3);
-console.log(typeof func);
+// let func = hof();
+// func(12, 3);
+// console.log(typeof func);
 
-// function factory
-const factory = (a) => {
-  return (b) => {
-    return a + b;
-  };
-};
+// // function factory
+// const factory = (a) => {
+//   return (b) => {
+//     return a + b;
+//   };
+// };
 
-const add5 = factory(5);
-const add20 = factory(20);
+// const add5 = factory(5);
+// const add20 = factory(20);
 
-console.log(add5(10));
-console.log(add20(2));
+// console.log(add5(10));
+// console.log(add20(2));
