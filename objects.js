@@ -64,7 +64,19 @@ let user2 = {
     street: "123",
   },
 };
-
+let user3 = {
+  name: "user 2",
+};
 //!dot
+if (user3.address) {
+  if (user.address.city) {
+    console.log(user.address.city);
+  } else {
+    console.log("city not found");
+  }
+}
+//optional chaining?
+
+console.log(user3?.address?.city ?? "not found");
 
 //!bracket
