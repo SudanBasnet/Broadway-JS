@@ -25,7 +25,7 @@
 
 function Counter() {
   let count = 0;
-  function inc() {
+  function inc(x) {
     count++;
     console.log(count);
     return count;
@@ -42,8 +42,8 @@ function Counter() {
 const counter = Counter();
 const counter1 = Counter();
 counter.increment();
-counter.increment();
-counter.increment();
+
 counter.decrement();
 counter.decrement();
 counter.increment();
+counter1.increment();
