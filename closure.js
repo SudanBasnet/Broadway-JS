@@ -3,21 +3,47 @@
 //*lexical scope
 
 // var a = 30;
-function add(a, b) {
-  console.log(a + b);
-}
+// function add(a, b) {
+//   console.log(a + b);
+// }
 
-add(12, 3);
-add(12, 4);
+// add(12, 3);
+// add(12, 4);
 
-//closure
-function counter() {
+// //closure
+// function counter() {
+//   let count = 0;
+//   const child = () => {
+//     console.log(count);
+//   };
+//   return child;
+// }
+
+// const a = counter();
+// a();
+// a();
+
+function Counter() {
   let count = 0;
-  const child = () => {
+  function inc() {
+    count++;
     console.log(count);
-  };
-  return child;
+    return count;
+  }
+  function decrement() {
+    count--;
+    console.log(count);
+    return count;
+  }
+  const obj = { increment: inc, decrement: decrement };
+  return obj;
 }
 
-const a = counter();
-a();
+const counter = Counter();
+const counter1 = Counter();
+counter.increment();
+counter.increment();
+counter.increment();
+counter.decrement();
+counter.decrement();
+counter.increment();
