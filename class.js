@@ -11,8 +11,7 @@ class User {
     this.#password = password;
   }
   getname() {
-    console.log(this);
-    console.log(this.name);
+    return this.name;
   }
   getPassword() {
     return this.#password;
@@ -26,11 +25,24 @@ console.log(john.name);
 john.getname();
 console.log(john, john.getPassword());
 
-class student {
-  name;
-  email;
-  #password;
-  faculty;
-  roll;
-  section;
+class Student extends User {
+  constructor(name, email, password, faculty, roll, section) {
+    // this.name = name;
+    // this.email = email;
+    // this.#password = password;
+    super(name, email, password);
+    this.faculty = faculty;
+    this.section = section;
+    this.roll = roll;
+  }
 }
+const student = new Student(
+  "sudan",
+  "sdnbasnet5@gmail.com",
+  "sudan123",
+  "BSCCSIT",
+  23,
+  "A",
+);
+// console.log(student);
+console.log(student.getname());
