@@ -40,3 +40,15 @@ const arr2 = [...arr1, 3, 4];
 
 // Rest
 const sum = (...nums) => nums.reduce((a, b) => a + b);
+
+// 6. Default Parameters
+const greet = (name = "Guest") => {
+  console.log(`Hello ${name}`);
+};
+
+// 7. Modules (import/export)
+// file1.js
+export const name = "John";
+
+// file2.js
+import { name } from "./file1.js";
