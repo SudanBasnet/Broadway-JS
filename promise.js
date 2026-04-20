@@ -111,3 +111,66 @@ getUser()
   });
 
 console.log("end");
+
+//? async await
+//? try/catch block
+async function test() {
+  try {
+    // console.log("hello");
+    const user = await getUser();
+    if (!user) {
+      throw new Error("User not found");
+    }
+    console.log(user);
+    const posts = await getPost(user._id);
+    console.log(posts);
+    const comments = await getComments(posts[0]._id);
+    console.log(comments);
+  } catch (error) {
+    console.log("catch");
+    console.log(error.message);
+  } finally {
+    console.log("finally");
+  }
+}
+
+// test();
+// console.log("end");
+
+// network req.
+// fetch()
+//! promise  chain
+fetch("https://jsonplaceholder.typicode.com/posts/10")
+  .then((response) => {
+    console.log(response);
+    return response.json();
+  })
+  .then((posts) => {
+    console.log(posts);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+
+//! async await
+//! try catch
+
+const fetchPosts = async () => {
+  try {
+    //
+    const response = await fetch(
+      "https://jsonplaceholder.typicode.com/posts/10",
+    );
+    const data = await response.json();
+    const res = await fetch(
+      `https://jsonplaceholder.typicode.com/comments?postId=${data.id}`,
+    );
+    console.log(data);
+    const comments = await res.json();
+    console.log(comments);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+fetchPosts();
