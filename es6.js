@@ -61,3 +61,16 @@ class Person {
     console.log(`Hi, I am ${this.name}`);
   }
 }
+
+// 9. Promises (Async handling)
+const fetchData = () => {
+  return new Promise((resolve, reject) => {
+    resolve("Data received");
+  });
+};
+// 10. for...of Loop
+const nums = [1, 2, 3];
+
+for (let num of nums) {
+  console.log(num);
+}
