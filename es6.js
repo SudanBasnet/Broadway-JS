@@ -52,3 +52,12 @@ export const name = "John";
 
 // file2.js
 import { name } from "./file1.js";
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+
+  greet() {
+    console.log(`Hi, I am ${this.name}`);
+  }
+}
