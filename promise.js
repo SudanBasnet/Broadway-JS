@@ -186,3 +186,54 @@ const run = async () => {
 };
 
 run();
+
+// real-world flow (you should remember this)
+// Frontend calls API → await fetch()
+// Backend receives → await database query
+// Backend sends data back
+// Frontend displays it
+
+// Common uses:
+// Calling APIs (fetch, axios)
+// Loading user data (login, profile, dashboard)
+// Form submissions
+// Waiting for animations / delays
+// const getUser = async () => {
+//   const res = await fetch("/api/user");
+//   const data = await res.json();
+//   console.log(data);
+// };
+
+// 👉 Example: When you open Instagram → posts load → async/await is used behind the scenes.
+
+// ⚙️ 2. Backend (Node.js / Express)
+
+// Used when your server needs to handle operations like database, APIs, files.
+
+// 4
+// Common uses:
+// Database queries (MongoDB, MySQL)
+// Calling external APIs
+// Reading/writing files
+// Authentication (login system)
+// app.get("/users", async (req, res) => {
+//   const users = await User.find();
+//   res.json(users);
+// });
+
+// 👉 Example: When frontend asks /users → backend fetches from DB → sends response.
+
+// 🧠 Simple understanding
+// Frontend → "Give me data" (request)
+// Backend → "Let me fetch it" (process)
+
+// 👉 Both use async/await because real-world operations take time.
+
+// 🔥 Real-world flow (you should remember this)
+// Frontend calls API → await fetch()
+// Backend receives → await database query
+// Backend sends data back
+// Frontend displays it
+// 💯 Interview answer (perfect)
+
+// 👉 "async/await is used in both frontend and backend to handle asynchronous operations like API calls, database queries, and file handling in a clean and readable way."
