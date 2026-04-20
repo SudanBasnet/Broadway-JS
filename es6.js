@@ -23,3 +23,12 @@ const add = (a, b) => a + b;
 
 const name = "Ram";
 console.log(`Hello ${name}`);
+
+// . Destructuring
+
+// Extract values from objects/arrays easily
+
+const user = { name: "Sam", age: 22 };
+
+const { name, age } = user;
+console.log(name);
