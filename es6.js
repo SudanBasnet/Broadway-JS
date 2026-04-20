@@ -32,3 +32,11 @@ const user = { name: "Sam", age: 22 };
 
 const { name, age } = user;
 console.log(name);
+
+// 5. Spread & Rest Operator (...)
+// Spread
+const arr1 = [1, 2];
+const arr2 = [...arr1, 3, 4];
+
+// Rest
+const sum = (...nums) => nums.reduce((a, b) => a + b);
