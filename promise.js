@@ -174,3 +174,15 @@ const fetchPosts = async () => {
 };
 
 fetchPosts();
+
+const delay = (ms) => {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+};
+
+const run = async () => {
+  console.log("Start");
+  await delay(2000);
+  console.log("After 2 seconds");
+};
+
+run();
