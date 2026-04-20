@@ -16,3 +16,10 @@ function add(a, b) {
 
 // ES6
 const add = (a, b) => a + b;
+
+// 3. Template Literals (` `)
+
+// Use backticks for dynamic strings
+
+const name = "Ram";
+console.log(`Hello ${name}`);
