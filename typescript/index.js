@@ -10,15 +10,75 @@
 //unknown
 //variable declaration
 //let, const, var
-// let str = "hello";
+// let str: string = "hello";
 // console.log(str);
 // //str=23;
-// let num;
+// let num: number;
 // num = 12;
 // //num = "hello";
 // num = 45;
 // num = 45.34;
-// let isLoggedIn = true;
+// let isLoggedIn: boolean = true;
 // isLoggedIn = false;
-// let a = null;
-// let b;
+// let a: null = null;
+// let b: undefined = undefined;
+// //!any
+// let c: any;
+// c = 5;
+// c = "any type";
+// console.log(c.toUpperCase());
+// //!unknown
+// let d: unknown;
+// d = 34;
+// d = "unknown type";
+// if (typeof d === "string") {
+//   console.log(c.toUpperCase());
+// }
+//array
+// let numbers: number[] = [1, 2, 3, 4];
+// let strings: Array<string> = ["1"];
+// numbers.push(23);
+// strings.push("23");
+//tuples
+// let tuple: [number, string, boolean, number] = [1, "1", true, 2];
+//object
+// let user: { name: string; email: string; age: number; password: string } = {
+//   name: "sudan",
+//   email: "sudan@gmail.com",
+//   age: 28,
+//   password: "12345",
+// };
+//interface
+// interface Iuser {
+//   name: string;
+//   email: string;
+//   age?: number; //? makes it optional
+//   password: string;
+// }
+// let user1: Iuser = {
+//   name: "sudan",
+//   email: "sudan@gmail.com",
+//   age: 28,
+//   password: "12345",
+// };
+// let user2: Iuser = {
+//   name: "sudan",
+//   email: "sudan@gmail.com",
+//   password: "12345",
+// };
+//enum
+var Role;
+(function (Role) {
+    Role["ADMIN"] = "ADMIN";
+    Role["SUPER_ADMIN"] = "SUPER ADMIN";
+    Role["USER"] = "USER";
+})(Role || (Role = {}));
+console.log(Role.ADMIN); //default is 0 and others will have 1, 2 etc.. but if we assign the value as 10 the rest will be 11 12 and so on
+let user1 = {
+    name: "sudan",
+    email: "sudan@gmail.com",
+    age: 28,
+    password: "12345",
+    role: Role.ADMIN,
+};
+console.log(user1.role);

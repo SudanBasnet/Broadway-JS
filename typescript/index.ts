@@ -98,3 +98,36 @@ interface Iuser {
   password: string;
   role: Role;
 }
+
+let user1: Iuser = {
+  name: "sudan",
+  email: "sudan@gmail.com",
+  age: 28,
+  password: "12345",
+  role: Role.ADMIN,
+};
+
+console.log(user1.role);
+interface Iuser2 {
+  name: string;
+  email: string;
+  age?: number; //? makes it optional
+  password: string;
+}
+
+let users: Iuser2[] = [
+  {
+    name: "",
+    email: "",
+    password: "",
+  },
+  {
+    name: "",
+    email: "",
+    password: "",
+  },
+];
+
+users.map((user) => {
+  console.log(user.email);
+});
