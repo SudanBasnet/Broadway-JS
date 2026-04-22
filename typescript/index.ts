@@ -40,3 +40,10 @@
 // if (typeof d === "string") {
 //   console.log(c.toUpperCase());
 // }
+
+//array
+
+let numbers: number[] = [1, 2, 3, 4];
+let strings: Array<string> = ["1"];
+numbers.push(23);
+strings.push("23");
