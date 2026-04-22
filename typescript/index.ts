@@ -43,35 +43,58 @@
 
 //array
 
-let numbers: number[] = [1, 2, 3, 4];
-let strings: Array<string> = ["1"];
-numbers.push(23);
-strings.push("23");
+// let numbers: number[] = [1, 2, 3, 4];
+// let strings: Array<string> = ["1"];
+// numbers.push(23);
+// strings.push("23");
 
 //tuples
 
-let tuple: [number, string, boolean, number] = [1, "1", true, 2];
+// let tuple: [number, string, boolean, number] = [1, "1", true, 2];
 
 //object
 
-let user: { name: string; email: string; age: number; password: string } = {
-  name: "sudan",
-  email: "sudan@gmail.com",
-  age: 28,
-  password: "12345",
-};
+// let user: { name: string; email: string; age: number; password: string } = {
+//   name: "sudan",
+//   email: "sudan@gmail.com",
+//   age: 28,
+//   password: "12345",
+// };
 
 //interface
+// interface Iuser {
+//   name: string;
+//   email: string;
+//   age?: number; //? makes it optional
+//   password: string;
+// }
+
+// let user1: Iuser = {
+//   name: "sudan",
+//   email: "sudan@gmail.com",
+//   age: 28,
+//   password: "12345",
+// };
+
+// let user2: Iuser = {
+//   name: "sudan",
+//   email: "sudan@gmail.com",
+
+//   password: "12345",
+// };
+
+//enum
+enum Role {
+  ADMIN = "ADMIN",
+  SUPER_ADMIN = "SUPER ADMIN",
+  USER = "USER",
+}
+console.log(Role.ADMIN); //default is 0 and others will have 1, 2 etc.. but if we assign the value as 10 the rest will be 11 12 and so on
+
 interface Iuser {
   name: string;
   email: string;
-  age: number;
+  age?: number; //? makes it optional
   password: string;
+  role: Role;
 }
-
-let user1: Iuser = {
-  name: "sudan",
-  email: "sudan@gmail.com",
-  age: 28,
-  password: "12345",
-};
