@@ -47,3 +47,31 @@ let numbers: number[] = [1, 2, 3, 4];
 let strings: Array<string> = ["1"];
 numbers.push(23);
 strings.push("23");
+
+//tuples
+
+let tuple: [number, string, boolean, number] = [1, "1", true, 2];
+
+//object
+
+let user: { name: string; email: string; age: number; password: string } = {
+  name: "sudan",
+  email: "sudan@gmail.com",
+  age: 28,
+  password: "12345",
+};
+
+//interface
+interface Iuser {
+  name: string;
+  email: string;
+  age: number;
+  password: string;
+}
+
+let user1: Iuser = {
+  name: "sudan",
+  email: "sudan@gmail.com",
+  age: 28,
+  password: "12345",
+};
