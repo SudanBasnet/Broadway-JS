@@ -131,3 +131,37 @@ let users: Iuser2[] = [
 users.map((user) => {
   console.log(user.email);
 });
+
+interface Ilogin {
+  email: string;
+  password: string;
+}
+
+interface Ireg extends Ilogin {
+  username: string;
+  fullname: string;
+}
+
+let user_acc: Ireg = {
+  fullname: "",
+  username: "",
+  email: "",
+  password: "",
+};
+
+//function
+
+const add = (a: number, b: number): number => {
+  return a + b;
+};
+
+//void
+
+let greet = (name: string): void => {
+  console.log(name);
+};
+
+//never
+const never = (): never => {
+  throw "new error";
+};
