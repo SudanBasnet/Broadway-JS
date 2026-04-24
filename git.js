@@ -20,5 +20,5 @@
 //merge
 
 //git merge <branchname> //you should be in the branch where you want to merge it
-// git checkout -b <brnach_name>
+// git checkout -b <branch_name>
 //git checkout <branchname>
