@@ -230,13 +230,12 @@ res_status = "error";
 
 //class
 class Person {
-  name:string;
+  name: string;
   protected email: string;
   private password: string;
-  public age:number;
+  age: number;
 }
-
-constructor (name:string,email: string, password: string, age:number){
+constructor(name:string, email: string, password: string, age:number){
   this.name = name;
   this.age = age;
   this.email = email;
