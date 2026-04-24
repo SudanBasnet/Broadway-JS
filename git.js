@@ -16,3 +16,9 @@
 //git branch => list all local branches
 //git branch <branch_name> => create new branch
 //git switch <branch_name> => switching the branches
+
+//merge
+
+//git merge <branchname> //you should be in the branch where you want to merge it
+// git checkout -b <brnach_name>
+//git checkout <branchname>
