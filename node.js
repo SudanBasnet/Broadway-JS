@@ -56,3 +56,15 @@ app.delete("/users/:id", (req, res) => {
 app.listen(3000, () => {
   console.log("Server running on http://localhost:3000");
 });
+
+const express = require("express");
+const mongoose = require("mongoose");
+
+const app = express();
+app.use(express.json());
+
+// connect to MongoDB
+mongoose
+  .connect("mongodb://127.0.0.1:27017/mydb")
+  .then(() => console.log("MongoDB Connected ✅"))
+  .catch((err) => console.log(err));
