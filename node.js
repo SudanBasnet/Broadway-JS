@@ -80,3 +80,18 @@ app.post("/users", async (req, res) => {
   await user.save();
   res.json(user);
 });
+
+app.get("/users", async (req, res) => {
+  const users = await User.find();
+  res.json(users);
+});
+
+app.get("/users/:id", async (req, res) => {
+  const user = await User.findById(req.params.id);
+  res.json(user);
+});
+
+app.delete("/users/:id", async (req, res) => {
+  await User.findByIdAndDelete(req.params.id);
+  res.json({ message: "Deleted" });
+});
