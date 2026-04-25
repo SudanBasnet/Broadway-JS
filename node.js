@@ -74,3 +74,9 @@ const userSchema = new mongoose.Schema({
 });
 
 const User = mongoose.model("User", userSchema);
+
+app.post("/users", async (req, res) => {
+  const user = new User({ name: req.body.name });
+  await user.save();
+  res.json(user);
+});
