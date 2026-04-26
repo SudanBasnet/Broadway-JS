@@ -20,5 +20,10 @@
 //merge
 
 //git merge <branchname> //you should be in the branch where you want to merge it
-// git checkout -b <branch_name>
+//git checkout -b <branch_name>
 //git checkout <branchname>
+
+//github
+//git remote add origin <github_repo_url>
+//git remote -v => list all repo where it is connected
+//git remote remove origin => removes the connection to repo
