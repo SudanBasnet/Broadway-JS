@@ -27,3 +27,4 @@
 //git remote add origin <github_repo_url>
 //git remote -v => list all repo where it is connected
 //git remote remove origin => removes the connection to repo
+//git push origin <branch_name>
