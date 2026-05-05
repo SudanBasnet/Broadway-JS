@@ -28,3 +28,12 @@
 //git remote -v => list all repo where it is connected
 //git remote remove origin => removes the connection to repo
 //git push origin <branch_name>
+//git pull origin <branchname>
+
+//Delete branch
+//git branch -d <branchname>
+
+//git help
+//git help -a
+
+//?git clone <git_remote_repo_link --> copy github repo to local
